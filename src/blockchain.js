@@ -84,11 +84,11 @@ class Block {
 }
 
 class Blockchain {
-  constructor() {
-    this.chain = [this.createGenesisBlock()];
-    this.difficulty = 2;
-    this.pendingTransactions = [];
-    this.miningReward = 100;
+  constructor(chain, difficulty, pendingTransactions, miningReward) {
+    this.chain = chain ?? [this.createGenesisBlock()];
+    this.difficulty = difficulty ?? 2;
+    this.pendingTransactions = pendingTransactions ?? [];
+    this.miningReward = miningReward ?? 100;
   }
 
   listAllBlocks() {
