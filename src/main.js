@@ -20,6 +20,6 @@ newCoin.minePendingTransactions(walletAddress);
 console.log("JR's Balance: ", newCoin.getBalanceOfAddress(walletAddress));
 
 console.log("Is chain valid?: ", newCoin.isChainValid());
-console.log(newCoin.listAllTransactions());
+console.log(newCoin.listAllBlocks());
 newCoin.chain[1].transactions[0].amount = 1;
 console.log("Is chain valid?: ", newCoin.isChainValid());

@@ -85,12 +85,12 @@ class Blockchain {
     this.miningReward = 100;
   }
 
-  listAllTransactions() {
+  listAllBlocks() {
     return this.chain;
   }
 
   createGenesisBlock() {
-    return new Block(new Date(), "Genesis", "0");
+    return new Block(new Date(), ["Genesis"], "Genesis");
   }
 
   getLatestBlock() {
