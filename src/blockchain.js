@@ -44,6 +44,7 @@ class Block {
     this.previousHash = previousHash;
     this.hash = this.calculateHash();
     this.nonce = 0;
+    this.mined = false;
   }
 
   calculateHash() {
@@ -63,6 +64,7 @@ class Block {
       this.hash = this.calculateHash();
     }
 
+    this.mined = true;
     console.log("Block mined: ", this.hash);
   }
 
