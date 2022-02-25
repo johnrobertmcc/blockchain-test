@@ -68,6 +68,10 @@ class Block {
     console.log("Block mined: ", this.hash);
   }
 
+  isMined() {
+    return this.mined;
+  }
+
   hasValidTransactions() {
     for (const tx of this.transactions) {
       if (!tx.isValid()) {
